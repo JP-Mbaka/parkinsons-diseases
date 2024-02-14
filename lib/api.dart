@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:parkinson/model.dart';
 
 Future<String> postFunc(body) async {
-  var url = Uri.parse('https://parkinsons-722ff78f57db.herokuapp.com/predict');
+  var url = Uri.parse('https://parkinson-ml.uc.r.appspot.com/predict');
   var response = await http.post(url,
       headers: {"Content-type": "application/json"},
       body: json.encode(body).toString());
